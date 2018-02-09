@@ -18,6 +18,9 @@ $( () => {
 
 const updateOutput = function() {
   $('iframe').contents().find('html').html("<html><head><style type='text/css'>" + $('#css-panel').val() + "</style></head><body>" + $('#html-panel').val() + "</body></html>");
+
+  document.getElementById('output-panel').contentWindow.eval($('#javascript-panel').val());
+
 };
 
 //Page Load with Default 2 Active
