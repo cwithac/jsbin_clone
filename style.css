@@ -50,3 +50,17 @@ nav {
 .active {
   background-color: #E0FFFF;
 }
+
+textarea {
+  resize: none;
+  border-top: none;
+  border-color: #DDDDDD;
+}
+
+iframe {
+  border: none;
+}
+
+.panel {
+  float: left;
+}
