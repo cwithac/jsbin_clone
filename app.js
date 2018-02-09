@@ -13,14 +13,16 @@ $( () => {
   });
 
   $('textarea').on('change keyup paste', function() {
-    $('iframe').contents().find('html').html($('#html-panel').val());
+    updateOutput();
   })
 
-
+const updateOutput = function() {
+  $('iframe').contents().find('html').html("<html><head><style type='text/css'>" + $('#css-panel').val() + "</style></head><body>" + $('#html-panel').val() + "</body></html>");
+};
 
 //Page Load with Default 2 Active
   $('.panel').height($(window).height() - $('nav').height() - 30);
   $('.panel').width(($(window).width() / 2) - 10);
-
+  updateOutput();
 
 });//
